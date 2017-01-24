@@ -1,4 +1,5 @@
 execute pathogen#infect()
+autocmd vimenter * NERDTree
 
 syntax enable
 let g:rehash256 = 1
