@@ -1,4 +1,4 @@
-execute pathon#infect()
+execute pathogen#infect()
 
 syntax enable
 let g:rehash256 = 1
