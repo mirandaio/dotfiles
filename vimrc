@@ -1,76 +1,30 @@
 execute pathogen#infect()
-autocmd vimenter * NERDTree
 
-syntax enable
-let g:rehash256 = 1
-let g:molokai_original = 1
-colorscheme molokai
+syntax on
 
-set softtabstop=4
-set shiftwidth=4
-set expandtab
+set nocompatible
+filetype plugin on
 
-set autoindent
-set smartindent
+" mappings for window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
-set ruler
-
-inoremap <c-u> <esc>viw<s-u><esc>ei
-nnoremap <c-u> viw<s-u><esc>e
-
-let mapleader = "-"
-let maplocalleader = "\\"
-
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
-vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>
-nnoremap H 0
-nnoremap L $
 inoremap jk <esc>
-" inoremap <esc> <nop>
 
-nnoremap <Up> <nop>
-nnoremap <Down> <nop>
-nnoremap <Left> <nop>
-nnoremap <Right> <nop>
+" easy expansion of the Active File Directory
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
+" Go back to file buffer after opening netrw
+nnoremap <C-y> :bd<cr>
+
+" Disable arrow keys
 inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
 
-autocmd FileType c setlocal softtabstop=4
-autocmd FileType c setlocal shiftwidth=4
-
-autocmd FileType cpp setlocal softtabstop=4
-autocmd FileType cpp setlocal shiftwidth=4
-
-autocmd FileType css setlocal softtabstop=2
-autocmd FileType css setlocal shiftwidth=2
-
-autocmd FileType eruby setlocal softtabstop=2
-autocmd FileType eruby setlocal shiftwidth=2
-
-autocmd FileType html setlocal softtabstop=2
-autocmd FileType html setlocal shiftwidth=2
-
-autocmd FileType java setlocal softtabstop=4
-autocmd FileType java setlocal shiftwidth=4
-
-autocmd FileType javascript setlocal softtabstop=2
-autocmd FileType javascript setlocal shiftwidth=2
-
-autocmd FileType markdown setlocal softtabstop=4
-autocmd FileType markdown setlocal shiftwidth=4
-
-autocmd FileType python setlocal softtabstop=4
-autocmd FileType python setlocal shiftwidth=4
-
-autocmd FileType ruby setlocal softtabstop=2
-autocmd FileType ruby setlocal softtabstop=2
-
-autocmd FileType tex setlocal softtabstop=2
-autocmd FileType tex setlocal shiftwidth=2
+" vim-prettier format on save
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml Prettier
