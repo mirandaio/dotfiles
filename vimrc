@@ -1,5 +1,8 @@
 execute pathogen#infect()
 
+" Reload file if it has changed outside of Vim
+set autoread
+
 syntax on
 
 set nocompatible
