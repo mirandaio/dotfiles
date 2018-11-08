@@ -1,6 +1,6 @@
 execute pathogen#infect()
 
-" Reload file if it has changed outside of Vim
+" reload file if it has changed outside of Vim
 set autoread
 
 syntax on
@@ -21,10 +21,10 @@ inoremap jk <esc>
 " easy expansion of the Active File Directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-" Go back to file buffer after opening netrw
+" delete buffer
 nnoremap <C-y> :bd<cr>
 
-" Disable arrow keys
+" disable arrow keys
 inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
