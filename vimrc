@@ -10,6 +10,13 @@ filetype plugin on
 
 colorscheme apprentice
 
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
+set autoindent
+set smartindent
+
 " mappings for window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
