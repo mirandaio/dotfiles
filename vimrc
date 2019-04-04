@@ -43,3 +43,6 @@ let g:netrw_list_hide= '.*\.swp$'
 " vim-prettier format on save
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+" set the default fonts
+set guifont=Menlo-Regular:h14
