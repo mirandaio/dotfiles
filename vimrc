@@ -1,14 +1,48 @@
-execute pathogen#infect()
+packloadall
+
+" Vim is based on Vi. Setting `nocompatible` switches from the default
+" Vi-compatibility mode and enables useful Vim functionality. This
+" configuration option turns out not to be necessary for the file named
+" '~/.vimrc', because Vim automatically enters nocompatible mode if that file
+" is present. But we're including it here just in case this config file is
+" loaded some other way (e.g. saved as `foo`, and then Vim started with
+" `vim -u foo`).
+set nocompatible
 
 " reload file if it has changed outside of Vim
 set autoread
 
+" Turn on syntax highlighting
 syntax on
 
-set nocompatible
 filetype plugin on
 
+" Disable the default Vim startup message
+set shortmess+=I
+
+" Show line numbers
+set number
+
+" This enables relative line numbering mode. With both number and
+" relativenumber enabled, the current line shows the true line number, while
+" all other lines (above and below) are numbered relative to the current line.
+" This is useful because you can tell, at a glance, what count is needed to
+" jump up or down to a particular line, by {count}k to go up or {count}j to go
+" down.
+set relativenumber
+
+" Unbind some useless/annoying default key bindings.
+" 'Q' in normal mode enters Ex mode. You almost never want this.
+nmap Q <Nop>
+
+" Disable annoying audible bell
+set noerrorbells visualbell t_vb=
+
+" set the colorscheme
 colorscheme apprentice
+
+" Always show the status line at the bottom, even if you only have one window open
+set laststatus=2
 
 set softtabstop=2
 set shiftwidth=2
@@ -23,6 +57,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" map jk in insert mode to the escape key
 inoremap jk <esc>
 
 " easy expansion of the Active File Directory
@@ -41,8 +76,8 @@ inoremap <Right> <nop>
 let g:netrw_list_hide= '.*\.swp$'
 
 " vim-prettier format on save
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 
-" set the default fonts
+" set the default font and font size
 set guifont=Menlo-Regular:h14
