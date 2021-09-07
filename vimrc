@@ -31,6 +31,15 @@ set number
 " down.
 set relativenumber
 
+" This setting makes search case-insensitive when all characters in the string
+" being searched are lowercase. However, the search becomes case-sensitive if
+" it contains any capital letters. This makes searching more convenient.
+set ignorecase
+set smartcase
+
+" Enable searching as you type, rather than waiting until you press enter
+set incsearch
+
 " Unbind some useless/annoying default key bindings.
 " 'Q' in normal mode enters Ex mode. You almost never want this.
 nmap Q <Nop>
@@ -50,6 +59,12 @@ set expandtab
 
 set autoindent
 set smartindent
+
+" Jump to start and end of line using the home row keys.
+" The default behaviour of H and L is to move to the top of the screen
+" and bottom of the screen respectively, which I don't find that useful.
+nnoremap H ^
+nnoremap L $
 
 " mappings for window navigation
 nnoremap <C-h> <C-w>h
