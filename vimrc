@@ -1,5 +1,3 @@
-packloadall
-
 " Vim is based on Vi. Setting `nocompatible` switches from the default
 " Vi-compatibility mode and enables useful Vim functionality. This
 " configuration option turns out not to be necessary for the file named
@@ -14,8 +12,6 @@ set autoread
 
 " Turn on syntax highlighting
 syntax on
-
-filetype plugin on
 
 " Disable the default Vim startup message
 set shortmess+=I
@@ -90,9 +86,21 @@ inoremap <Right> <nop>
 " hide .swp files from displaying in netrw
 let g:netrw_list_hide= '.*\.swp$'
 
+" set the default font and font size
+set guifont=Menlo-Regular:h14
+
+" Install plugins using Vim Plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+call plug#end()
+
+" ignore files for ctrlp
+let g:ctrlp_custom_ignore = 'node_modules'
+
 " vim-prettier format on save
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
-" set the default font and font size
-set guifont=Menlo-Regular:h14
