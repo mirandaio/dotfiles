@@ -93,6 +93,7 @@ set guifont=Menlo-Regular:h14
 call plug#begin('~/.vim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mileszs/ack.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 call plug#end()
