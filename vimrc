@@ -102,5 +102,8 @@ call plug#end()
 let g:ctrlp_custom_ignore = 'node_modules'
 
 " vim-prettier format on save
+" Allow auto formatting for file without @format or @prettier tag
 let g:prettier#autoformat_require_pragma = 0
+" Format only when a config file can be found in the current directory or any
+" parent directory
 let g:prettier#autoformat_config_present = 1
