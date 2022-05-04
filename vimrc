@@ -67,6 +67,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <C-n> <C-w>o
 
 " This is to fix the issue where if your current split is Netrw, you
 " can't change to a split to the right using the <C-l> mappint
