@@ -68,6 +68,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" This is to fix the issue where if your current split is Netrw, you
+" can't change to a split to the right using the <C-l> mappint
+" https://stackoverflow.com/a/33351897/1052946
+nmap <unique> <c-r> <Plug>NetrwRefresh
+
 " map jk in insert mode to the escape key
 inoremap jk <esc>
 
