@@ -67,7 +67,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <C-n> <C-w>o
+
+" mapping for closing all windows except current
+nnoremap <C-m> <C-w>o
 
 " This is to fix the issue where if your current split is Netrw, you
 " can't change to a split to the right using the <C-l> mappint
@@ -113,3 +115,8 @@ let g:prettier#autoformat_require_pragma = 0
 " Format only when a config file can be found in the current directory or any
 " parent directory
 let g:prettier#autoformat_config_present = 1
+
+let mapleader = " "
+nnoremap <leader>pv :Vex<CR>
+
+nnoremap <leader><CR> :so ~/.vimrc<CR>
