@@ -73,6 +73,12 @@ nnoremap <C-m> <C-w>o
 " https://stackoverflow.com/a/33351897/1052946
 nmap <unique> <c-r> <Plug>NetrwRefresh
 
+" hide netrw's banner
+let g:netrw_banner=0
+
+" hide .swp files from displaying in netrw
+let g:netrw_list_hide= '.*\.swp$'
+
 " map jk in insert mode to the escape key
 inoremap jk <esc>
 
@@ -87,9 +93,6 @@ inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
-
-" hide .swp files from displaying in netrw
-let g:netrw_list_hide= '.*\.swp$'
 
 " set the default font and font size
 set guifont=Menlo-Regular:h14
