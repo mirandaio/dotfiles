@@ -43,9 +43,6 @@ nmap Q <Nop>
 " Disable annoying audible bell
 set noerrorbells visualbell t_vb=
 
-" set the colorscheme
-colorscheme apprentice
-
 " Always show the status line at the bottom, even if you only have one window open
 set laststatus=2
 
@@ -120,3 +117,7 @@ let mapleader = " "
 nnoremap <leader>pv :Vex<CR>
 
 nnoremap <leader><CR> :so ~/.vimrc<CR>
+
+" set the colorscheme (set this near the end of the file https://github.com/romainl/Apprentice#enabling-apprentice)
+colorscheme apprentice
+
