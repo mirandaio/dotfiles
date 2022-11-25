@@ -11,7 +11,7 @@ vim.opt.compatible = false
 vim.opt.autoread = true
 
 -- Disable the default Neovim startup message
-vim.cmd("set shortmess+=I")
+vim.cmd('set shortmess+=I')
 
 -- show line numbers
 vim.opt.number = true
@@ -36,7 +36,7 @@ vim.opt.smartcase = true
 vim.opt.incsearch = true
 
 -- Disable annoying audible bell
-vim.cmd("set noerrorbells visualbell t_vb=")
+vim.cmd('set noerrorbells visualbell t_vb=')
 
 -- Always show the status line at the bottom, even if you only have one window open
 vim.opt.laststatus = 2
@@ -51,5 +51,14 @@ vim.opt.smartindent = true
 -- Disable swapfiles
 vim.opt.swapfile = false
 
+-- Do not wait until reaching bottom of the screen to start scrolling
+vim.opt.scrolloff = 8
+
 -- Turn on syntax highlighting
-vim.cmd("syntax on")
+vim.cmd('syntax on')
+
+-- hide netrw's banner
+vim.g.netrw_banner = 0
+
+-- set the leader key
+vim.g.mapleader = ' '

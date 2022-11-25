@@ -3,8 +3,6 @@
 ]]
 vim.api.nvim_set_keymap("n", "Q", "<Nop>", { noremap = false })
 
-
-
 --[[ Jump to start and end of line using the home row keys.
  The default behaviour of H and L is to move to the top of the screen
  and bottom of the screen respectively, which I don't find that useful.
@@ -38,3 +36,4 @@ vim.api.nvim_set_keymap("n", "<Down>", "<nop>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Left>", "<nop>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Right>", "<nop>", { noremap = true })
 
+vim.api.nvim_set_keymap('n', '<leader>pv', ':Vex<CR>', { noremap = true })
