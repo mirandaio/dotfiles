@@ -37,3 +37,7 @@ vim.api.nvim_set_keymap("n", "<Left>", "<nop>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Right>", "<nop>", { noremap = true })
 
 vim.api.nvim_set_keymap('n', '<leader>pv', ':Vex<CR>', { noremap = true })
+
+-- Telescope mappings
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
