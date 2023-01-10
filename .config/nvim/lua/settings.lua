@@ -54,6 +54,10 @@ vim.opt.swapfile = false
 -- Do not wait until reaching bottom of the screen to start scrolling
 vim.opt.scrolloff = 8
 
+-- Do not show the sign column because it was appearing and disappearing
+-- when I switched between normal and insert mode
+vim.opt.signcolumn = "no"
+
 -- Turn on syntax highlighting
 vim.cmd('syntax on')
 
