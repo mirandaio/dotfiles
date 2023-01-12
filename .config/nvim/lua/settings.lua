@@ -58,6 +58,9 @@ vim.opt.scrolloff = 8
 -- when I switched between normal and insert mode
 vim.opt.signcolumn = "no"
 
+-- Enable copying and pasting to and from the system clipboard
+vim.opt.clipboard = "unnamedplus"
+
 -- Turn on syntax highlighting
 vim.cmd('syntax on')
 

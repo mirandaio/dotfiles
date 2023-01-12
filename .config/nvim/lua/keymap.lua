@@ -36,7 +36,11 @@ vim.api.nvim_set_keymap("n", "<Down>", "<nop>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Left>", "<nop>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Right>", "<nop>", { noremap = true })
 
+-- display Netrw on a vertical split
 vim.api.nvim_set_keymap('n', '<leader>pv', ':Vex<CR>', { noremap = true })
+
+-- move to next item in the tag stack. Useful when navigating with go to definition
+vim.keymap.set('n', '<C-y>', ':ta<CR>', {})
 
 -- Telescope mappings
 local builtin = require('telescope.builtin')
