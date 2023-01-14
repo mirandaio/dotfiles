@@ -1,6 +1,8 @@
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  use { "williamboman/mason.nvim" }
+
   use 'neovim/nvim-lspconfig'
 
   use {
@@ -9,7 +11,7 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use { "williamboman/mason.nvim" }
+  use 'sbdchd/neoformat'
 
   use {
     "ellisonleao/gruvbox.nvim" ,

@@ -69,3 +69,6 @@ vim.g.netrw_banner = 0
 
 -- set the leader key
 vim.g.mapleader = ' '
+
+-- Tell Neoformat to use a project-level version of Prettier
+vim.g.neoformat_try_node_exe = 1
