@@ -1,5 +1,4 @@
 require('plugins')
 require('lsp')
-require('masonconfig')
 require('settings')
 require('keymap')
