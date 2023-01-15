@@ -61,9 +61,6 @@ vim.opt.signcolumn = "no"
 -- Enable copying and pasting to and from the system clipboard
 vim.opt.clipboard = "unnamedplus"
 
--- Turn on syntax highlighting
-vim.cmd('syntax on')
-
 -- hide netrw's banner
 vim.g.netrw_banner = 0
 

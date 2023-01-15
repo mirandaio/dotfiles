@@ -1,9 +1,11 @@
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  use { "williamboman/mason.nvim" }
+  use 'williamboman/mason.nvim'
 
   use 'neovim/nvim-lspconfig'
+
+  use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
   use {
     'nvim-telescope/telescope.nvim',
@@ -13,12 +15,7 @@ return require('packer').startup(function(use)
 
   use 'sbdchd/neoformat'
 
-  use {
-    "ellisonleao/gruvbox.nvim" ,
-    config = function()
-      vim.cmd('colorscheme gruvbox')
-    end
-  }
+  use 'ellisonleao/gruvbox.nvim'
 
   use({
     'rose-pine/neovim',
