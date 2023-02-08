@@ -1,15 +1,3 @@
---[[ Vim is based on Vi. Setting `nocompatible` switches from the default
- Vi-compatibility mode and enables useful Vim functionality. This
- configuration option turns out not to be necessary for the file named
- '~/.vimrc', because Vim automatically enters nocompatible mode if that file
- is present. But we're including it here just in case this config file is loaded some other way (e.g. saved as `foo`, and then Vim started with
- `vim -u foo`).
- --]]
-vim.opt.compatible = false
-
--- reload file if it has changed outside of neovim
-vim.opt.autoread = true
-
 -- Disable the default Neovim startup message
 vim.cmd('set shortmess+=I')
 
@@ -40,9 +28,6 @@ vim.opt.incsearch = true
 
 -- Disable annoying audible bell
 vim.cmd('set noerrorbells visualbell t_vb=')
-
--- Always show the status line at the bottom, even if you only have one window open
-vim.opt.laststatus = 2
 
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
