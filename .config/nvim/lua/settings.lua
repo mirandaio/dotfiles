@@ -32,6 +32,9 @@ vim.opt.relativenumber = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+-- Don't keep search terms highlighted
+vim.opt.hlsearch = false
+
 -- Enable searching as you type, rather than waiting until you press enter
 vim.opt.incsearch = true
 
@@ -47,6 +50,9 @@ vim.opt.expandtab = true
 
 vim.opt.autoindent = true
 vim.opt.smartindent = true
+
+-- Don't wrap lines longer than screen size
+vim.opt.wrap = false
 
 -- Disable swapfiles
 vim.opt.swapfile = false
