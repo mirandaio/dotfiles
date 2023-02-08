@@ -1,6 +1,9 @@
 -- Disable the default Neovim startup message
 vim.cmd('set shortmess+=I')
 
+-- hide netrw's banner
+vim.g.netrw_banner = 0
+
 -- show line numbers
 vim.opt.number = true
 
@@ -51,9 +54,6 @@ vim.opt.signcolumn = "no"
 
 -- Enable copying and pasting to and from the system clipboard
 vim.opt.clipboard = "unnamedplus"
-
--- hide netrw's banner
-vim.g.netrw_banner = 0
 
 -- set the leader key
 vim.g.mapleader = ' '
