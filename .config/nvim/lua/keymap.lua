@@ -45,5 +45,13 @@ vim.keymap.set('n', '<C-y>', ':ta<CR>', {})
 -- Telescope mappings
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+-- mapping to be able to find ignored files such as .env files
+vim.keymap.set('n', '<leader>fe', function()
+  builtin.find_files({
+    hidden = true,
+    no_ignore = true,
+    file_ignore_patterns = { 'node_modules/', '.git/' }
+  })
+end, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
