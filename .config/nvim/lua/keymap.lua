@@ -58,3 +58,11 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fr', builtin.lsp_references, {})
 vim.keymap.set('n', '<leader>fi', builtin.lsp_incoming_calls, {})
 vim.keymap.set('n', '<leader>fo', builtin.lsp_outgoing_calls, {})
+
+-- bubble line up and down in normal mode
+vim.keymap.set('n', '[e', ':m-2<CR>', {})
+vim.keymap.set('n', ']e', ':m+1<CR>', {})
+
+-- bubble selection up and down in visual/selection mode
+vim.keymap.set('x', '[e', ':m-2<CR>gv', {})
+vim.keymap.set('x', ']e', ":m'>+<CR>gv", {})
