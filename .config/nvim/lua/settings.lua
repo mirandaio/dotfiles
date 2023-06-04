@@ -14,7 +14,7 @@ vim.opt.number = true
  jump up or down to a particular line, by {count}k to go up or {count}j to go
  down.
  --]]
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 --[[ This setting makes search case-insensitive when all characters in the string
  being searched are lowercase. However, the search becomes case-sensitive if
