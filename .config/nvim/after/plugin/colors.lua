@@ -1,5 +1,9 @@
 require('gruvbox').setup({
-  italic = false
+  italic = {
+    strings = false,
+    comments = false,
+    folds = false
+  }
 })
 
 require('rose-pine').setup({
