@@ -44,7 +44,9 @@ vim.keymap.set('n', '<C-y>', ':ta<CR>', {})
 
 -- Telescope mappings
 local builtin = require('telescope.builtin')
+
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+
 -- mapping to be able to find ignored files such as .env files
 vim.keymap.set('n', '<leader>fe', function()
   builtin.find_files({
@@ -53,16 +55,19 @@ vim.keymap.set('n', '<leader>fe', function()
     file_ignore_patterns = { 'node_modules/', '.git/' }
   })
 end, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+
+-- live-grep-args allows you to pass args to ripgrep
+-- useful when you want to text search within a specific directory
+vim.keymap.set('n', '<leader>fg', ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fr', builtin.lsp_references, {})
 vim.keymap.set('n', '<leader>fi', builtin.lsp_incoming_calls, {})
 vim.keymap.set('n', '<leader>fo', builtin.lsp_outgoing_calls, {})
 
 -- bubble line up and down in normal mode
-vim.keymap.set('n', '[e', ':m-2<CR>', {})
-vim.keymap.set('n', ']e', ':m+1<CR>', {})
+vim.keymap.set('n', ']e', ':m-2<CR>', {})
+vim.keymap.set('n', '[e', ':m+1<CR>', {})
 
 -- bubble selection up and down in visual/selection mode
-vim.keymap.set('x', '[e', ':m-2<CR>gv', {})
-vim.keymap.set('x', ']e', ":m'>+<CR>gv", {})
+vim.keymap.set('x', ']e', ':m-2<CR>gv', {})
+vim.keymap.set('x', '[e', ":m'>+<CR>gv", {})
