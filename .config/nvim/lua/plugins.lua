@@ -71,7 +71,6 @@ return {
     tag = '0.1.3',
     dependencies = {'nvim-lua/plenary.nvim', 'nvim-telescope/telescope-live-grep-args.nvim'},
     config = function()
-
       local telescope = require('telescope')
       telescope.load_extension('live_grep_args')
       telescope.setup({
@@ -84,6 +83,26 @@ return {
             hidden = true,
             file_ignore_patterns = {
               '.git/'
+            },
+            mappings = {
+              n = {
+                ["<C-s>"] = require('telescope.actions').select_horizontal
+              },
+              i = {
+                ["<C-s>"] = require('telescope.actions').select_horizontal
+              }
+            }
+          }
+        },
+        extensions = {
+          live_grep_args = {
+            mappings = {
+              n = {
+                ["<C-s>"] = require('telescope-live-grep-args.actions').select_horizontal
+              },
+              i = {
+                ["<C-s>"] = require('telescope-live-grep-args.actions').select_horizontal
+              }
             }
           }
         }
