@@ -98,10 +98,10 @@ return {
           live_grep_args = {
             mappings = {
               n = {
-                ["<C-s>"] = require('telescope-live-grep-args.actions').select_horizontal
+                ["<C-s>"] = require('telescope.actions').select_horizontal
               },
               i = {
-                ["<C-s>"] = require('telescope-live-grep-args.actions').select_horizontal
+                ["<C-s>"] = require('telescope.actions').select_horizontal
               }
             }
           }
