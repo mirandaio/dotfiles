@@ -3,12 +3,17 @@
 ]]
 vim.api.nvim_set_keymap("n", "Q", "<Nop>", { noremap = false })
 
---[[ Jump to start and end of line using the home row keys.
+--[[ Jump to start (no white space) and end of line using the home row keys.
  The default behaviour of H and L is to move to the top of the screen
  and bottom of the screen respectively, which I don't find that useful.
 ]]
 vim.api.nvim_set_keymap("n", "H", "^", { noremap = true })
 vim.api.nvim_set_keymap("n", "L", "$", { noremap = true })
+
+-- Also map in visual mode to move to start (no white space)
+-- or end of line
+vim.api.nvim_set_keymap("v", "H", "^", { noremap = true })
+vim.api.nvim_set_keymap("v", "L", "$", { noremap = true })
 
 -- mappings for window navigation
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true })
