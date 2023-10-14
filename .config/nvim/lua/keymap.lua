@@ -12,8 +12,8 @@ vim.api.nvim_set_keymap("n", "L", "$", { noremap = true })
 
 -- Also map in visual mode to move to start (no white space)
 -- or end of line
-vim.api.nvim_set_keymap("v", "H", "^", { noremap = true })
-vim.api.nvim_set_keymap("v", "L", "$", { noremap = true })
+vim.api.nvim_set_keymap("x", "H", "^", { noremap = true })
+vim.api.nvim_set_keymap("x", "L", "$", { noremap = true })
 
 -- mappings for window navigation
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true })
