@@ -72,6 +72,7 @@ return {
     dependencies = {'nvim-lua/plenary.nvim', 'nvim-telescope/telescope-live-grep-args.nvim'},
     config = function()
       local telescope = require('telescope')
+      local actions = require('telescope.actions')
       telescope.load_extension('live_grep_args')
       telescope.setup({
         pickers = {
@@ -86,10 +87,20 @@ return {
             },
             mappings = {
               n = {
-                ["<C-s>"] = require('telescope.actions').select_horizontal
+                ["<C-s>"] = actions.select_horizontal
               },
               i = {
-                ["<C-s>"] = require('telescope.actions').select_horizontal
+                ["<C-s>"] = actions.select_horizontal
+              }
+            }
+          },
+          buffers = {
+            mappings = {
+              n = {
+                ["<C-s>"] = actions.select_horizontal
+              },
+              i = {
+                ["<C-s>"] = actions.select_horizontal
               }
             }
           }
@@ -98,10 +109,10 @@ return {
           live_grep_args = {
             mappings = {
               n = {
-                ["<C-s>"] = require('telescope.actions').select_horizontal
+                ["<C-s>"] = actions.select_horizontal
               },
               i = {
-                ["<C-s>"] = require('telescope.actions').select_horizontal
+                ["<C-s>"] = actions.select_horizontal
               }
             }
           }
