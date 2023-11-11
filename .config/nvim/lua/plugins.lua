@@ -75,6 +75,16 @@ return {
       local actions = require('telescope.actions')
       telescope.load_extension('live_grep_args')
       telescope.setup({
+        defaults = {
+          mappings = {
+            n = {
+              ["<C-s>"] = actions.select_horizontal
+            },
+            i = {
+              ["<C-s>"] = actions.select_horizontal
+            }
+          }
+        },
         pickers = {
           -- Configure find_files so that it can find hidden files but ignore the
           -- .git directory. Given that find_files respects .gitignore but .git is
@@ -85,36 +95,6 @@ return {
             file_ignore_patterns = {
               '.git/'
             },
-            mappings = {
-              n = {
-                ["<C-s>"] = actions.select_horizontal
-              },
-              i = {
-                ["<C-s>"] = actions.select_horizontal
-              }
-            }
-          },
-          buffers = {
-            mappings = {
-              n = {
-                ["<C-s>"] = actions.select_horizontal
-              },
-              i = {
-                ["<C-s>"] = actions.select_horizontal
-              }
-            }
-          }
-        },
-        extensions = {
-          live_grep_args = {
-            mappings = {
-              n = {
-                ["<C-s>"] = actions.select_horizontal
-              },
-              i = {
-                ["<C-s>"] = actions.select_horizontal
-              }
-            }
           }
         }
       })
