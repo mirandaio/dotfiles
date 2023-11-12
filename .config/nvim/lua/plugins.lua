@@ -1,4 +1,16 @@
 return {
+  {
+    'rose-pine/neovim',
+    lazy = false,
+    priority = 1000,
+    name = 'rose-pine',
+    config = function()
+      require('rose-pine').setup({
+        disable_italics = true
+      })
+      vim.cmd('colorscheme rose-pine')
+    end
+  },
   -- Mason is a plugin that is helpful for installing LSP servers, such as
   -- tsserver (typescript-language-server), and avoid issues when you have
   -- different node versions in projects such as when using a version
@@ -111,16 +123,6 @@ return {
           foldes = false
         }
       })
-    end
-  },
-  {
-    'rose-pine/neovim',
-    name = 'rose-pine',
-    config = function()
-      require('rose-pine').setup({
-        disable_italics = true
-      })
-      vim.cmd('colorscheme rose-pine')
     end
   }
 }
