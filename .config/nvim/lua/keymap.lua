@@ -47,6 +47,10 @@ vim.api.nvim_set_keymap('n', '<leader>pv', ':Vex<CR>', { noremap = true })
 -- move to next item in the tag stack. Useful when navigating with go to definition
 vim.keymap.set('n', '<C-y>', ':ta<CR>', {})
 
+-- Remap for dealing with line wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
 -- Telescope mappings
 local builtin = require('telescope.builtin')
 

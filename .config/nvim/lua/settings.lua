@@ -39,8 +39,8 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
--- Don't wrap lines longer than screen size
-vim.opt.wrap = false
+-- Enable break indent
+vim.o.breakindent = true
 
 -- Disable swapfiles
 vim.opt.swapfile = false
@@ -54,9 +54,6 @@ vim.opt.signcolumn = "no"
 
 -- Enable copying and pasting to and from the system clipboard
 vim.opt.clipboard = "unnamedplus"
-
--- set the leader key
-vim.g.mapleader = ' '
 
 -- Tell Neoformat to use a project-level version of Prettier
 vim.g.neoformat_try_node_exe = 1
