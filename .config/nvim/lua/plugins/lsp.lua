@@ -4,14 +4,15 @@ return {
   -- different node versions in projects such as when using a version
   -- manager like asdf
   {
-    'williamboman/mason.nvim',
-    lazy = false,
-    config = function()
-      require('mason').setup()
-    end
-  },
-  {
     'neovim/nvim-lspconfig',
+    dependencies = {
+      {
+        'williamboman/mason.nvim',
+        config = function()
+          require('mason').setup()
+        end
+      }
+    },
     config = function()
       local lspconfig = require('lspconfig')
       local on_attach = function()
