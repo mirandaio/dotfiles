@@ -69,7 +69,7 @@ end, {})
 -- useful when you want to text search within a specific directory
 vim.keymap.set('n', '<leader>fg', ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fr', builtin.lsp_references, {})
+vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = '[G]oto [R]eferences' })
 vim.keymap.set('n', '<leader>fi', builtin.lsp_incoming_calls, {})
 vim.keymap.set('n', '<leader>fo', builtin.lsp_outgoing_calls, {})
 
