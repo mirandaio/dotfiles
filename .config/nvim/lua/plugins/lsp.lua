@@ -40,6 +40,10 @@ return {
           }
         }
       }
+
+      lspconfig.graphql.setup{
+        on_attach = on_attach
+      }
     end
   }
 }
