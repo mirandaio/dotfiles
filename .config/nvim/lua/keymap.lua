@@ -28,7 +28,7 @@ vim.api.nvim_set_keymap("n", "<C-m>", "<C-w>o", { noremap = true })
  can't change to a split to the right using the <C-l> mappint
  https://stackoverflow.com/a/33351897/1052946
 ]]
-vim.api.nvim_set_keymap("n", "<C-r>", "<Plug>NetrwRefresh", { noremap = false, unique = true })
+vim.api.nvim_set_keymap("n", "<C-a>", "<Plug>NetrwRefresh", { noremap = false, unique = true })
 
 -- disable arrow keys
 vim.api.nvim_set_keymap("i", "<Up>", "<nop>", { noremap = true })
