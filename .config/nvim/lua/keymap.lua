@@ -54,7 +54,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Telescope mappings
 local builtin = require('telescope.builtin')
 
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[F]ind [F]iles'})
 
 -- mapping to be able to find ignored files such as .env files
 vim.keymap.set('n', '<leader>fe', function()
@@ -68,8 +68,7 @@ end, {})
 -- live-grep-args allows you to pass args to ripgrep
 -- useful when you want to text search within a specific directory
 vim.keymap.set('n', '<leader>fg', ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = '[G]oto [R]eferences' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = '[F]ind [B]uffers' })
 vim.keymap.set('n', '<leader>fi', builtin.lsp_incoming_calls, {})
 vim.keymap.set('n', '<leader>fo', builtin.lsp_outgoing_calls, {})
 
