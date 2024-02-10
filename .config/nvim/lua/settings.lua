@@ -29,9 +29,6 @@ vim.opt.hlsearch = false
 -- Enable searching as you type, rather than waiting until you press enter
 vim.opt.incsearch = true
 
--- Disable annoying audible bell
-vim.cmd('set noerrorbells visualbell t_vb=')
-
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true

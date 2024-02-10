@@ -30,6 +30,9 @@ vim.api.nvim_set_keymap("n", "<C-m>", "<C-w>o", { noremap = true })
 ]]
 vim.api.nvim_set_keymap("n", "<C-a>", "<Plug>NetrwRefresh", { noremap = false, unique = true })
 
+-- disable pressing space to move cursor
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<nop>', { silent = true })
+
 -- disable arrow keys
 vim.api.nvim_set_keymap("i", "<Up>", "<nop>", { noremap = true })
 vim.api.nvim_set_keymap("i", "<Down>", "<nop>", { noremap = true })
