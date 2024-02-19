@@ -47,10 +47,12 @@ vim.opt.scrolloff = 8
 
 -- Do not show the sign column because it was appearing and disappearing
 -- when I switched between normal and insert mode
-vim.opt.signcolumn = "no"
+vim.opt.signcolumn = 'no'
 
 -- Enable copying and pasting to and from the system clipboard
-vim.opt.clipboard = "unnamedplus"
+vim.o.clipboard = 'unnamedplus'
+
+vim.o.termguicolors = true
 
 -- Tell Neoformat to use a project-level version of Prettier
 vim.g.neoformat_try_node_exe = 1
