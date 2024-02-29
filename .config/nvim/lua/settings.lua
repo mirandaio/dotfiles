@@ -23,6 +23,10 @@ vim.opt.number = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+-- Configure how new splits should be opened
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
 -- Don't keep search terms highlighted
 vim.opt.hlsearch = false
 
@@ -37,7 +41,7 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 
 -- Enable break indent
-vim.o.breakindent = true
+vim.opt.breakindent = true
 
 -- Disable swapfiles
 vim.opt.swapfile = false
@@ -50,9 +54,9 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = 'no'
 
 -- Enable copying and pasting to and from the system clipboard
-vim.o.clipboard = 'unnamedplus'
+vim.opt.clipboard = 'unnamedplus'
 
-vim.o.termguicolors = true
+vim.opt.termguicolors = true
 
 -- Tell Neoformat to use a project-level version of Prettier
 vim.g.neoformat_try_node_exe = 1
