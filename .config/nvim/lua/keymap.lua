@@ -3,23 +3,18 @@
 ]]
 vim.api.nvim_set_keymap("n", "Q", "<Nop>", { noremap = false })
 
---[[ Jump to start (no white space) and end of line using the home row keys.
- The default behaviour of H and L is to move to the top of the screen
- and bottom of the screen respectively, which I don't find that useful.
+--[[ Jump to first non-white character of line and end of line using the
+ home row keys. The default behaviour of H and L is to move to the top of the
+ screen and bottom of the screen respectively, which I don't find that useful.
 ]]
-vim.api.nvim_set_keymap("n", "H", "^", { noremap = true })
-vim.api.nvim_set_keymap("n", "L", "$", { noremap = true })
-
--- Also map in visual mode to move to start (no white space)
--- or end of line
-vim.api.nvim_set_keymap("x", "H", "^", { noremap = true })
-vim.api.nvim_set_keymap("x", "L", "$", { noremap = true })
+vim.keymap.set({'n', 'x'}, 'H', '^')
+vim.keymap.set({'n', 'x'}, 'L', '$')
 
 -- mappings for window navigation
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true })
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move focus to the right window' })
 
 -- mapping for closing all windows except current
 vim.api.nvim_set_keymap("n", "<C-m>", "<C-w>o", { noremap = true })
