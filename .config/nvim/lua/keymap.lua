@@ -34,15 +34,10 @@ vim.api.nvim_set_keymap("n", "<C-a>", "<Plug>NetrwRefresh", { noremap = false, u
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<nop>', { silent = true })
 
 -- disable arrow keys
-vim.api.nvim_set_keymap("i", "<Up>", "<nop>", { noremap = true })
-vim.api.nvim_set_keymap("i", "<Down>", "<nop>", { noremap = true })
-vim.api.nvim_set_keymap("i", "<Left>", "<nop>", { noremap = true })
-vim.api.nvim_set_keymap("i", "<Right>", "<nop>", { noremap = true })
-
-vim.api.nvim_set_keymap("n", "<Up>", "<nop>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<Down>", "<nop>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<Left>", "<nop>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<Right>", "<nop>", { noremap = true })
+vim.keymap.set({'i', 'n', 'x'}, '<Up>', '<nop>')
+vim.keymap.set({'i', 'n', 'x'}, '<Down>', '<nop>')
+vim.keymap.set({'i', 'n', 'x'}, '<Left>', '<nop>')
+vim.keymap.set({'i', 'n', 'x'}, '<Right>', '<nop>')
 
 -- display Netrw on a vertical split
 vim.api.nvim_set_keymap('n', '<leader>pv', ':Vex<CR>', { noremap = true })
