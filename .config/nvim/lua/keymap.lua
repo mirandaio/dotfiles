@@ -1,3 +1,5 @@
+-- Basic keymaps that don't need plugins to be loaded
+
 --[[ Unbind some useless/annoying default key bindings.
  'Q' in normal mode enters Ex mode. You almost never want this.
 ]]
@@ -20,7 +22,7 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move focus to the right window'
 vim.api.nvim_set_keymap("n", "<C-m>", "<C-w>o", { noremap = true })
 
 --[[ This is to fix the issue where if your current split is Netrw, you
- can't change to a split to the right using the <C-l> mappint
+ can't change to a split to the right using the <C-l> mapping
  https://stackoverflow.com/a/33351897/1052946
 ]]
 vim.api.nvim_set_keymap("n", "<C-a>", "<Plug>NetrwRefresh", { noremap = false, unique = true })
@@ -43,31 +45,6 @@ vim.keymap.set('n', '<C-y>', ':ta<CR>', {})
 -- Remap for dealing with line wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
--- Telescope mappings
-local builtin = require('telescope.builtin')
-
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[F]ind [F]iles'})
-
--- mapping to be able to find ignored files such as .env files
-vim.keymap.set('n', '<leader>fe', function()
-  builtin.find_files({
-    hidden = true,
-    no_ignore = true,
-    file_ignore_patterns = { 'node_modules/', '.git/' }
-  })
-end, {})
-
--- live-grep-args allows you to pass args to ripgrep
--- useful when you want to text search within a specific directory
-vim.keymap.set('n',
-                '<leader>fg',
-                ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
-                { desc = '[F]ind by [G]rep' })
-vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = '[F]ind [W]ord under cursor' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = '[F]ind [B]uffers' })
-vim.keymap.set('n', '<leader>fi', builtin.lsp_incoming_calls, {})
-vim.keymap.set('n', '<leader>fo', builtin.lsp_outgoing_calls, {})
 
 -- bubble line up and down in normal mode
 vim.keymap.set('n', ']e', ':m-2<CR>', {})
