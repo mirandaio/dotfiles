@@ -44,7 +44,7 @@ vim.opt.smartindent = true
 vim.opt.breakindent = true
 
 -- Disable swapfiles
-vim.opt.swapfile = false
+-- vim.opt.swapfile = false
 
 -- Do not wait until reaching bottom of the screen to start scrolling
 vim.opt.scrolloff = 8
@@ -52,6 +52,10 @@ vim.opt.scrolloff = 8
 -- Do not show the sign column because it was appearing and disappearing
 -- when I switched between normal and insert mode
 vim.opt.signcolumn = 'no'
+
+-- Decrease update time
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
 
 -- Enable copying and pasting to and from the system clipboard
 vim.opt.clipboard = 'unnamedplus'
