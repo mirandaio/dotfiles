@@ -12,17 +12,5 @@ return {
       })
       vim.cmd('colorscheme rose-pine')
     end
-  },
-  {
-    'ellisonleao/gruvbox.nvim',
-    config = function()
-      require('gruvbox').setup({
-        italic = {
-          strings = false,
-          comments = false,
-          foldes = false
-        }
-      })
-    end
   }
 }
