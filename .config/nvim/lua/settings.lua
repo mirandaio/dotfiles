@@ -44,7 +44,7 @@ vim.opt.smartindent = true
 vim.opt.breakindent = true
 
 -- Disable swapfiles
--- vim.opt.swapfile = false
+vim.opt.swapfile = false
 
 -- Do not wait until reaching bottom of the screen to start scrolling
 vim.opt.scrolloff = 8

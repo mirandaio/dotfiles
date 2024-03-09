@@ -46,6 +46,9 @@ vim.keymap.set('n', '<C-y>', ':ta<CR>', {})
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- Navigate to the parent directory of current buffer
+vim.keymap.set('n', '-', '<CMD>Ex<CR>', { desc = 'Open parent directory' })
+
 -- bubble line up and down in normal mode
 vim.keymap.set('n', ']e', ':m-2<CR>', {})
 vim.keymap.set('n', '[e', ':m+1<CR>', {})
