@@ -46,6 +46,9 @@ vim.opt.breakindent = true
 -- Disable swapfiles
 vim.opt.swapfile = false
 
+-- Show which line the cursor is on
+vim.opt.cursorline = true
+
 -- Do not wait until reaching bottom of the screen to start scrolling
 vim.opt.scrolloff = 8
 
