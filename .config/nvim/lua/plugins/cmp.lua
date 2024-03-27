@@ -21,7 +21,7 @@ return {
           ['<C-y>'] = cmp.mapping.confirm { select = true },
           -- Scroll the documentation window [b]ack / [f]orward
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-f>'] = cmp.mapping.scrool_docs(4),
+          ['<C-f>'] = cmp.mapping.scroll_docs(4),
           -- Manually trigger a completion from nvim-cmp.
           -- Generally you don't need this, because nvim-cmp will display
           -- completions whenever it has completion options available.
