@@ -11,5 +11,6 @@
   "plenary.nvim": { "branch": "master", "commit": "f7adfc4b3f4f91aab6caebf42b3682945fbc35be" },
   "rose-pine": { "branch": "main", "commit": "a29b09d15a9ef5cd575fbe5ae2a3cfb854876caf" },
   "telescope-live-grep-args.nvim": { "branch": "master", "commit": "731a046da7dd3adff9de871a42f9b7fb85f60f47" },
-  "telescope.nvim": { "branch": "master", "commit": "54930e1abfc94409e1bb9266e752ef8379008592" }
+  "telescope.nvim": { "branch": "master", "commit": "54930e1abfc94409e1bb9266e752ef8379008592" },
+  "tokyonight.nvim": { "branch": "main", "commit": "f4b415bfbce390866a83277db42cf6aa94230728" }
 }
