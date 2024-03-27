@@ -12,6 +12,11 @@ return {
       cmp.setup({
         completion = { completeopt = 'menu,menuone,noinsert' },
 
+        window = {
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered()
+        },
+
         mapping = cmp.mapping.preset.insert {
           -- Select the [n]ext item
           ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -31,6 +36,18 @@ return {
         sources = {
           { name = 'nvim_lsp' },
           { name = 'path' }
+        },
+
+        formatting = {
+          format = function(entry, vim_item)
+
+            vim_item.menu = ({
+              nvim_lsp = '[LSP]',
+              path = '[path]'
+            })[entry.source.name]
+
+            return vim_item
+          end
         }
       })
     end
