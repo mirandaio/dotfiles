@@ -1,6 +1,7 @@
 return {
   {
     'rose-pine/neovim',
+    tag = 'v3.0.1',
     priority = 1000,
     name = 'rose-pine',
     init = function()
@@ -14,6 +15,7 @@ return {
   },
   {
     'folke/tokyonight.nvim',
+    tag = 'v3.0.1',
     config = function()
       require('tokyonight').setup({
         styles = {

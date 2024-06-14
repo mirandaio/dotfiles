@@ -1,8 +1,17 @@
 return {
   {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.3',
-    dependencies = {'nvim-lua/plenary.nvim', 'nvim-telescope/telescope-live-grep-args.nvim'},
+    tag = '0.1.8',
+    dependencies = {
+      {
+        'nvim-lua/plenary.nvim',
+        tag = 'v0.1.4'
+      },
+      {
+        'nvim-telescope/telescope-live-grep-args.nvim',
+        tag = 'v1.1.0'
+      },
+    },
     config = function()
       local telescope = require('telescope')
       local actions = require('telescope.actions')
