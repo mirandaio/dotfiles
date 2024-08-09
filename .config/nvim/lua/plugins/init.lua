@@ -1,7 +1,7 @@
 return {
   {
     'sbdchd/neoformat',
-    tag = 'v0.4.0'
+    commit = 'b3b38589b39038dc12c2f5a59a828ed43439363a',
   },
   {
     'numToStr/Comment.nvim',
