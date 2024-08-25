@@ -67,3 +67,8 @@ vim.opt.termguicolors = true
 
 -- Tell Neoformat to use a project-level version of Prettier
 vim.g.neoformat_try_node_exe = 1
+
+-- Disable virtual text
+vim.diagnostic.config({
+  virtual_text = false
+})

@@ -25,6 +25,7 @@ return {
         vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { buffer = 0, desc = '[G]oto [I]mplementation' })
         vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, { buffer = 0, desc = 'Type [D]efinition' })
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = 0, desc = 'Hover Documentation' })
+        vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
       end
 
       lspconfig.tsserver.setup{
