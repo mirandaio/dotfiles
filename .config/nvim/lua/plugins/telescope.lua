@@ -22,10 +22,10 @@ return {
         defaults = {
           mappings = {
             n = {
-              ["<C-s>"] = actions.select_horizontal
+              ['<C-s>'] = actions.select_horizontal
             },
             i = {
-              ["<C-s>"] = actions.select_horizontal
+              ['<C-s>'] = actions.select_horizontal
             }
           }
         },
@@ -39,6 +39,16 @@ return {
             file_ignore_patterns = {
               '.git/'
             },
+          },
+          buffers = {
+            mappings = {
+              i = {
+                ['<c-d>'] = actions.delete_buffer
+              },
+              n = {
+                ['<c-d>'] = actions.delete_buffer
+              }
+            }
           }
         }
       })

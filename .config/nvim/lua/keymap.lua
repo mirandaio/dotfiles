@@ -18,14 +18,17 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move focus to the lower window'
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move focus to the right window' })
 
+-- disable closing all windows except current using Enter
+vim.keymap.set('n', '<Enter>', '<nop>')
+
 -- mapping for closing all windows except current
-vim.api.nvim_set_keymap("n", "<C-m>", "<C-w>o", { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-m>', '<C-w>o', { noremap = true })
 
 --[[ This is to fix the issue where if your current split is Netrw, you
  can't change to a split to the right using the <C-l> mapping
  https://stackoverflow.com/a/33351897/1052946
 ]]
-vim.api.nvim_set_keymap("n", "<C-a>", "<Plug>NetrwRefresh", { noremap = false, unique = true })
+vim.api.nvim_set_keymap('n', '<C-a>', '<Plug>NetrwRefresh', { noremap = false, unique = true })
 
 -- disable pressing space to move cursor
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<nop>', { silent = true })
