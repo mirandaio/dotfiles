@@ -1,6 +1,14 @@
-keybind = alt+v=new_split:right
-keybind = alt+s=new_split:down
-keybind = alt+k=goto_split:top
-keybind = alt+j=goto_split:bottom
-keybind = alt+h=goto_split:left
-keybind = alt+l=goto_split:right
+keybind = opt+v=new_split:right
+keybind = opt+s=new_split:down
+
+keybind = opt+k=goto_split:top
+keybind = opt+j=goto_split:bottom
+keybind = opt+h=goto_split:left
+keybind = opt+l=goto_split:right
+
+font-family = Monaco
+font-size = 14
+
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
