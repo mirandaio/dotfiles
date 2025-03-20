@@ -6,6 +6,10 @@ keybind = opt+j=goto_split:bottom
 keybind = opt+h=goto_split:left
 keybind = opt+l=goto_split:right
 
+keybind = all:cmd+equal=increase_font_size:1
+keybind = all:cmd+minus=decrease_font_size:1
+keybind = all:cmd+0=reset_font_size
+
 font-family = Monaco
 font-size = 14
 
