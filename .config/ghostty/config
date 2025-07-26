@@ -16,3 +16,5 @@ font-size = 14
 font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
+
+macos-option-as-alt = left
