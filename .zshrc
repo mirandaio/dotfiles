@@ -1,7 +1,7 @@
 # Disable highlighting of pasted text into the terminal
 zle_highlight=('paste:none')
 
-export EDITOR=nvim
+export EDITOR=hx
 
 # Customize prompt to only show the last two levels of the
 # working directory path.
