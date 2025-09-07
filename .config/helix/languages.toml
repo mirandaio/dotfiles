@@ -1,17 +1,3 @@
-# Make sure to install these for the LSPs and formatters
-#
-# JavaScript/TypeScript
-# npm install -g typescript typescript-language-server
-# npm install -g prettier
-#
-# Python
-# npm install -g pyright
-# brew install ruff
-#
-# clojure-lsp
-# brew remove clojure-lsp if you have old clojure-lsp installed via brew
-# brew install clojure-lsp/brew/clojure-lsp-native
-
 [[language]]
 name = "javascript"
 auto-format = true
