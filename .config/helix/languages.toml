@@ -1,3 +1,13 @@
+# Install the following tools for language servers and
+# formatters to work:
+# mise use -g npm:typescript
+# mise use -g npm:typescript-language-server
+# mise use -g npm:graphql-language-service-cli
+# mise use -g npm:prettier
+# brew install ruff
+# mise use -g npm:pyright
+# brew install clojure-lsp/brew/clojure-lsp-native
+
 [[language]]
 name = "javascript"
 auto-format = true
