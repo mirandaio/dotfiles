@@ -1,4 +1,5 @@
 theme = "nightfox"
+# theme = "carbonfox"
 
 [editor]
 default-yank-register = "+"

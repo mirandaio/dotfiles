@@ -30,9 +30,19 @@ auto-format = true
 formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
 
 [[language]]
+name = "json"
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "json"] }
+
+[[language]]
 name = "graphql"
 auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "graphql"] }
+
+[[language]]
+name = "clojure"
+auto-format = true
+formatter = { command = "cljfmt", args = ["fix", "-"] }
 
 [language-server.pyright.config.python.analysis]
 typeCheckingMode = "basic"
