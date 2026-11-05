@@ -13,6 +13,8 @@ keybind = all:cmd+0=reset_font_size
 font-family = Monaco
 font-size = 14
 
+split-divider-color = #3A8F50
+
 font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
