@@ -22,3 +22,5 @@ font-feature = -dlig
 macos-option-as-alt = left
 
 window-save-state = never
+
+auto-update = check
